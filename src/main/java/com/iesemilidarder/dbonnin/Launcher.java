@@ -1,6 +1,7 @@
 package com.iesemilidarder.dbonnin;
 
 import com.iesemilidarder.dbonnin.data.Moto;
+import com.iesemilidarder.dbonnin.data.Vehicle;
 
 public class Launcher {
     public static void main(String... args) {
@@ -9,6 +10,7 @@ public class Launcher {
         moto.start();
         System.out.println("pista que voy!");
         moto.brake();
+        Vehicle aux = new Moto();
     }
 }
 
