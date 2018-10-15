@@ -1,5 +1,8 @@
 package com.iesemilidarder.dbonnin.data;
 
+import com.iesemilidarder.dbonnin.AppConstants;
+import com.iesemilidarder.dbonnin.exception.IESMyException;
+
 public abstract class Vehicle {
     private String color;
     private Integer numWheels;
@@ -10,6 +13,9 @@ public abstract class Vehicle {
     }
 
     public void setNumWheels(Integer numWheels) {
+        if (numWheels == null || numWheels > AppConstants.MAX_WHEELS) {
+            throw new IESMyException("Demasiadas ruedas nen!");
+        }
         this.numWheels = numWheels;
     }
 
