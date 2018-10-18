@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 
-public class MyFirstLauncher {
+public class MyFirstServiceLauncher {
     public static void main(String[] args) {
-        SpringApplication.run(MyFirstLauncher.class, args);
+        SpringApplication.run(MyFirstServiceLauncher.class, args);
     }
 }
