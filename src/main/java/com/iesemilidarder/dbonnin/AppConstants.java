@@ -6,4 +6,6 @@ public class AppConstants {
     private  AppConstants() {
         //TODO
     }
+
+    public static final int MAX_DURATION = 50;
 }

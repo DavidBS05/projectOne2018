@@ -5,6 +5,7 @@ import com.iesemilidarder.dbonnin.exception.IESMyException;
 
 public abstract class Vehicle {
     private String name;
+    private Integer duration;
     private String color;
     private Integer numWheels;
     private Double price;
@@ -17,9 +18,15 @@ public abstract class Vehicle {
         this.name = name;
     }
 
-    public Integer getNumWheels() {
-        return numWheels;
+    public Integer getDuration() { return duration; }
+
+    public void setDuration(Integer duration) {
+        if (duration == null || duration > AppConstants.MAX_DURATION) {
+            throw new IESMyException("Te has quedado corto!!");
+        }
     }
+
+    public Integer getNumWheels() { return numWheels; }
 
     public void setNumWheels(Integer numWheels) {
         if (numWheels == null || numWheels > AppConstants.MAX_WHEELS) {
